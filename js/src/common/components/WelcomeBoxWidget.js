@@ -7,6 +7,9 @@ import AvatarEditor from 'flarum/components/AvatarEditor';
 import SignUpModal from 'flarum/components/SignUpModal';
 import Button from 'flarum/common/components/Button';
 import moment from 'moment/moment';
+import 'moment/locale/zh-cn';
+
+moment.locale('zh-cn');
 
 export default class WelcomeBoxWidget extends Widget {
     oninit(vnode) {
