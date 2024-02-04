@@ -6,10 +6,6 @@ import listItems from 'flarum/helpers/listItems';
 import AvatarEditor from 'flarum/components/AvatarEditor';
 import SignUpModal from 'flarum/components/SignUpModal';
 import Button from 'flarum/common/components/Button';
-import moment from 'moment/moment';
-import 'moment/locale/zh-cn';
-
-moment.locale('zh-cn');
 
 export default class WelcomeBoxWidget extends Widget {
     oninit(vnode) {
@@ -26,8 +22,8 @@ export default class WelcomeBoxWidget extends Widget {
 
     content() {
         const user = app.session.user;
-        const lastSeenAt = user?.lastSeenAt() !== null ? user?.lastSeenAt() : false;
-        const userLang = app.translator.getLocale();
+        const money = user.attribute('money'); // 获取金钱数量
+        const moneyName = app.forum.attribute('antoinefr-money.moneyname').replace('[money] ', ''); // 获取金钱名称
         const useWidget = app.forum.attribute('justoverclock-welcomebox.UseWidget');
         const isGuestBoxHidden = app.forum.attribute('HideGuestBox');
         const SettingsLink = app.route('settings');
@@ -87,14 +83,10 @@ export default class WelcomeBoxWidget extends Widget {
                                     <label className="textinfo">{app.translator.trans('flarum-ext-welcomebox.forum.discussion')}</label>:{' '}
                                     <strong className="textinfo">{formatNumber(user.discussionCount())}</strong>
                                 </li>
-                                {lastSeenAt !== null && (
-                                    <li>
-                                        <label className="textinfo">{app.translator.trans('flarum-ext-welcomebox.forum.lastSeen')}</label>:{' '}
-                                        <strong className="textinfo">{`${moment(lastSeenAt)
-                                            .locale(userLang || 'en')
-                                            .fromNow()}`}</strong>
-                                    </li>
-                                )}
+                                <li>
+                                    <label className="textinfo">{moneyName}</label>:{' '}
+                                    <strong className="textinfo">{money}</strong>
+                                </li>
                             </div>
                         </div>
                     </div>
