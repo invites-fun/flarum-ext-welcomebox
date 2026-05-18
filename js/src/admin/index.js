@@ -1,4 +1,4 @@
-import app from 'flarum/app';
+import app from 'flarum/forum/app';
 import registerWidget from '../common/registerWidget';
 
 app.initializers.add('justoverclock-welcomebox', () => {

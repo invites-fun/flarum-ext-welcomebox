@@ -1,11 +1,11 @@
-import { extend } from 'flarum/extend';
-import app from 'flarum/app';
-import IndexPage from 'flarum/components/IndexPage';
+import { extend } from 'flarum/common/extend';
+import app from 'flarum/forum/app';
+import IndexPage from 'flarum/forum/components/IndexPage';
 import username from 'flarum/common/helpers/username';
-import formatNumber from 'flarum/utils/formatNumber';
-import listItems from 'flarum/helpers/listItems';
-import AvatarEditor from 'flarum/components/AvatarEditor';
-import SignUpModal from 'flarum/components/SignUpModal';
+import formatNumber from 'flarum/common/utils/formatNumber';
+import listItems from 'flarum/common/helpers/listItems';
+import AvatarEditor from 'flarum/forum/components/AvatarEditor';
+import SignUpModal from 'flarum/forum/components/SignUpModal';
 import Button from 'flarum/common/components/Button';
 import registerWidget from '../common/registerWidget';
 

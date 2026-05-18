@@ -1,10 +1,10 @@
 import Widget from 'flarum/extensions/afrux-forum-widgets-core/common/components/Widget';
 import app from 'flarum/forum/app';
 import username from 'flarum/common/helpers/username';
-import formatNumber from 'flarum/utils/formatNumber';
-import listItems from 'flarum/helpers/listItems';
-import AvatarEditor from 'flarum/components/AvatarEditor';
-import SignUpModal from 'flarum/components/SignUpModal';
+import formatNumber from 'flarum/common/utils/formatNumber';
+import listItems from 'flarum/common/helpers/listItems';
+import AvatarEditor from 'flarum/forum/components/AvatarEditor';
+import SignUpModal from 'flarum/forum/components/SignUpModal';
 import Button from 'flarum/common/components/Button';
 
 export default class WelcomeBoxWidget extends Widget {
