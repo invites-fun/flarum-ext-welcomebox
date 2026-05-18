@@ -50,7 +50,8 @@
         "flarum-cli": {
             "modules": {
                 "styleci": true,
-                "prettier": true
+                "prettier": true,
+                "githubActions": true
             }
         }
     }
