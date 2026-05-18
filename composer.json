@@ -46,6 +46,12 @@
         },
         "flagrow": {
             "discuss": "https://discuss.flarum.org/d/27023"
+        },
+        "flarum-cli": {
+            "modules": {
+                "styleci": true,
+                "prettier": true
+            }
         }
     }
 }
