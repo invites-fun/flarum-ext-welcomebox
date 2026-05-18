@@ -22,14 +22,14 @@ export default class WelcomeBoxWidget extends Widget {
 
   content() {
     const user = app.session.user;
-    const money = user.attribute('money'); // 获取金钱数量
-    const moneyName = app.forum.attribute('antoinefr-money.moneyname').replace('[money] ', ''); // 获取金钱名称
     const useWidget = app.forum.attribute('justoverclock-welcomebox.UseWidget');
     const isGuestBoxHidden = app.forum.attribute('HideGuestBox');
-    const SettingsLink = app.route('settings');
     const ImgAvatar = app.forum.attribute('imgUrl') || app.forum.attribute('baseUrl') + '/assets/extensions/justoverclock-welcomebox/no-avatar.png';
 
     if (useWidget && user) {
+      const money = user.attribute('money'); // 获取金钱数量
+      const moneyName = (app.forum.attribute('antoinefr-money.moneyname') || '').replace('[money] ', ''); // 获取金钱名称
+      const SettingsLink = app.route('settings');
       return (
         <div className="containerwb">
           <div className="backgrwb">

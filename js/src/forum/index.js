@@ -13,12 +13,12 @@ app.initializers.add('justoverclock/flarum-ext-welcomebox', () => {
   registerWidget(app);
   extend(IndexPage.prototype, 'sidebarItems', (items) => {
     const user = app.session.user;
-    const money = user.attribute('money'); // 获取金钱数量
-    const moneyName = app.forum.attribute('antoinefr-money.moneyname').replace('[money] ', ''); // 获取金钱名称
-    const SettingsLink = app.route('settings');
     const useWidget = app.forum.attribute('justoverclock-welcomebox.UseWidget');
 
     if (!useWidget && user) {
+      const money = user.attribute('money'); // 获取金钱数量
+      const moneyName = (app.forum.attribute('antoinefr-money.moneyname') || '').replace('[money] ', '');
+      const SettingsLink = app.route('settings');
       items.add(
         'welcomeBox',
         <div className="containerwb">
