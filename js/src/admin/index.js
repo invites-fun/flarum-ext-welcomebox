@@ -1,7 +1,7 @@
 import app from 'flarum/forum/app';
 import registerWidget from '../common/registerWidget';
 
-app.initializers.add('justoverclock-welcomebox', () => {
+app.initializers.add('justoverclock/flarum-ext-welcomebox', () => {
   registerWidget(app);
   app.extensionData
     .for('justoverclock-welcomebox')
