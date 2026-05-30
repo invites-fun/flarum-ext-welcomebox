@@ -175,36 +175,6 @@ body when (@config-dark-mode = true) {
     background: #1b2028;
   }
 }
-
-i.icon.fas.fa-sign-out-alt.logoutt.Button-icon {
-  margin: 0 auto;
-}
-
-.logwbox {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  padding: 0;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  color: inherit;
-  
-  &:hover {
-    background: rgba(0, 0, 0, 0.05);
-  }
-}
-
-i.icon.fas.fa-sign-out-alt.logoutt.Button-icon:hover {
-  color: darkred;
-}
-
 .welcomebox-widget{
   .AfruxWidgets-Widget-content {
     background: transparent;
@@ -216,6 +186,32 @@ i.icon.fas.fa-sign-out-alt.logoutt.Button-icon:hover {
     width: 180px;
   }
 }
+
+i.icon.fas.fa-sign-out-alt.logout.Button-icon {
+  margin: 0 auto;
+}
+
+.logwbox {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0;
+  color: var(--muted-color) !important;
+  cursor: pointer;
+  
+  i.icon {
+    font-size: 14px;
+    margin: 0 auto;
+  }
+  
+  &:hover {
+    color: var(--error-color) !important;
+  }
+}
+
 
 li.item-group1 {
   list-style: none;
