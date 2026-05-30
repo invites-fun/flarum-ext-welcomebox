@@ -2,7 +2,6 @@ import Widget from 'flarum/extensions/afrux-forum-widgets-core/common/components
 import app from 'flarum/forum/app';
 import WelcomeBoxContent from './WelcomeBoxContent';
 
-
 export default class WelcomeBoxWidget extends Widget {
   className() {
     return 'welcomebox-widget';

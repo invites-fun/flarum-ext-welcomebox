@@ -94,18 +94,11 @@ export default class WelcomeBoxContent extends Component {
     return (
       <div className="containerwb">
         <div className="backgrwbguest">
-          <img
-            className="guestavatarimg"
-            src={imgAvatar}
-            alt={app.translator.trans('flarum-ext-welcomebox.forum.welcomeguest')}
-          />
+          <img className="guestavatarimg" src={imgAvatar} alt={app.translator.trans('flarum-ext-welcomebox.forum.welcomeguest')} />
           <div className="guesttext">{app.translator.trans('flarum-ext-welcomebox.forum.welcomeguest')}</div>
           <p className="guestdesc">{app.translator.trans('flarum-ext-welcomebox.forum.notregistered')}</p>
           {allowSignUp && (
-            <Button
-              className="Button--primary hasIcon SplitDropdown-button"
-              onclick={() => app.modal.show(SignUpModal)}
-            >
+            <Button className="Button--primary hasIcon SplitDropdown-button" onclick={() => app.modal.show(SignUpModal)}>
               {app.translator.trans('core.forum.header.sign_up_link')}
             </Button>
           )}
