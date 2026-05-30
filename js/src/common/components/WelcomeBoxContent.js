@@ -29,7 +29,7 @@ export default class WelcomeBoxContent extends Component {
       <div className="containerwb">
         <div className="backgrwb">
           <Button
-            icon="fas fa-sign-out-alt logoutt"
+            icon="fas fa-sign-out-alt logout"
             title={app.translator.trans('core.forum.header.log_out_button')}
             className="logwbox"
             onclick={app.session.logout.bind(app.session)}
