@@ -8,7 +8,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,8 +47,9 @@
   background: @primarybgww;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   border-radius: 20px;
-  width: 200px;
-  height: 100%;
+  width: inherit;
+  height: auto;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,6 +59,11 @@
 .avatarwb {
   display: flex;
   justify-content: center;
+  
+  .Dropdown-toggle {
+    display: none;
+  }
+  
   .Avatar {
     margin-top: 20px;
     margin-bottom: 8px;
@@ -84,27 +90,6 @@
   text-align: center;
 }
 
-.avatarwb {
-  .Dropdown-toggle {
-    margin-top: 20px;
-    margin-bottom: 8px;
-    font-size: 40px;
-    padding: 15px;
-    color: #fcfcfc;
-    width: 100px;
-    height: 100px;
-    box-sizing: border-box;
-    border: 5px white solid;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-    transform: translatey(0px);
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-}
 
 .TagsPage-nav{
   .containerwb{
@@ -169,6 +154,10 @@ p.guestdesc {
 .menuicon{
   color: @primary-color;
   padding: 5px;
+  transition: filter 0.2s;
+  &:hover {
+    filter: brightness(1.1);
+  }
 }
 
 .circletop {
@@ -191,12 +180,25 @@ i.icon.fas.fa-sign-out-alt.logoutt.Button-icon {
   margin: 0 auto;
 }
 
-button.Dropdown-toggle.Button.logwbox.hasIcon {
-  border-radius: 16px;
+.logwbox {
   position: absolute;
-  margin-left: 150px;
-  margin-top: -243px;
+  top: 15px;
+  right: 15px;
   background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: inherit;
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
 }
 
 i.icon.fas.fa-sign-out-alt.logoutt.Button-icon:hover {
@@ -210,9 +212,6 @@ i.icon.fas.fa-sign-out-alt.logoutt.Button-icon:hover {
   .backgrwb {
     width: 180px;
   }
-  button.Dropdown-toggle.Button.logwbox.hasIcon {
-    margin-left: 140px;
-  }
   .backgrwbguest {
     width: 180px;
   }
@@ -221,5 +220,3 @@ i.icon.fas.fa-sign-out-alt.logoutt.Button-icon:hover {
 li.item-group1 {
   list-style: none;
 }
-
-
