@@ -16,7 +16,6 @@ app.initializers.add('justoverclock/flarum-ext-welcomebox', () => {
     })
     .registerSetting({
       setting: 'justoverclock-welcomebox.imgUrl',
-      name: 'imgUrl',
       type: 'URL',
       label: app.translator.trans('flarum-ext-welcomebox.admin.img'),
       help: app.translator.trans('flarum-ext-welcomebox.admin.img-help'),

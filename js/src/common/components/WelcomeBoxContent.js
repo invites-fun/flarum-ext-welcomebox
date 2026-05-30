@@ -6,6 +6,7 @@ import listItems from 'flarum/common/helpers/listItems';
 import AvatarEditor from 'flarum/forum/components/AvatarEditor';
 import SignUpModal from 'flarum/forum/components/SignUpModal';
 import Button from 'flarum/common/components/Button';
+import Link from 'flarum/common/components/Link';
 
 export default class WelcomeBoxContent extends Component {
   view() {
@@ -30,15 +31,15 @@ export default class WelcomeBoxContent extends Component {
           <Button
             icon="fas fa-sign-out-alt logoutt"
             title={app.translator.trans('core.forum.header.log_out_button')}
-            className="Dropdown-toggle Button logwbox"
+            className="Dropdown-toggle logwbox"
             onclick={app.session.logout.bind(app.session)}
           />
           <div>
-            <a href={app.route.user(user)}>
+            <Link href={app.route.user(user)}>
               <div className="avatarwb">
                 <AvatarEditor user={user} />
               </div>
-            </a>
+            </Link>
           </div>
           <div className="contentwb">
             <div className="textinfo">
@@ -48,18 +49,18 @@ export default class WelcomeBoxContent extends Component {
             </div>
             <div className="cont">
               <div className="circletop">
-                <a href={settingsLink} title={app.translator.trans('core.forum.settings.title')}>
+                <Link href={settingsLink} title={app.translator.trans('core.forum.settings.title')}>
                   <i className="menuicon fas fa-tasks"></i>
-                </a>
-                <a href={app.route.user(user)} title={app.translator.trans('flarum-ext-welcomebox.forum.tooltipProfile')}>
+                </Link>
+                <Link href={app.route.user(user)} title={app.translator.trans('flarum-ext-welcomebox.forum.tooltipProfile')}>
                   <i className="menuicon far fa-user"></i>
-                </a>
-                <a href={app.route.user(user) + '/mentions'} title={app.translator.trans('flarum-ext-welcomebox.forum.tooltipMentions')}>
+                </Link>
+                <Link href={app.route.user(user) + '/mentions'} title={app.translator.trans('flarum-ext-welcomebox.forum.tooltipMentions')}>
                   <i className="menuicon fas fa-at"></i>
-                </a>
-                <a href={app.route.user(user) + '/discussions'} title={app.translator.trans('flarum-ext-welcomebox.forum.tooltipDisclist')}>
+                </Link>
+                <Link href={app.route.user(user) + '/discussions'} title={app.translator.trans('flarum-ext-welcomebox.forum.tooltipDisclist')}>
                   <i className="menuicon far fa-list-alt"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -101,13 +102,12 @@ export default class WelcomeBoxContent extends Component {
           <div className="guesttext">{app.translator.trans('flarum-ext-welcomebox.forum.welcomeguest')}</div>
           <p className="guestdesc">{app.translator.trans('flarum-ext-welcomebox.forum.notregistered')}</p>
           {allowSignUp && (
-            <button
-              className="Button Button--primary hasIcon SplitDropdown-button"
-              type="button"
+            <Button
+              className="Button--primary hasIcon SplitDropdown-button"
               onclick={() => app.modal.show(SignUpModal)}
             >
               {app.translator.trans('core.forum.header.sign_up_link')}
-            </button>
+            </Button>
           )}
           <div className="contentwb"></div>
         </div>
