@@ -16,3 +16,4 @@ flarum-ext-welcomebox:
     img: Image url (Guest Box)
     img-help: put here the url of image for guest box
     UseWidget: Use Widget Version
+    UseWidgetHelp: Requires the Afrux Forum Widgets extension. Without it, the welcome box appears in the index page sidebar.

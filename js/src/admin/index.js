@@ -7,9 +7,10 @@ app.initializers.add('justoverclock/flarum-ext-welcomebox', () => {
       setting: 'justoverclock-welcomebox.UseWidget',
       label: app.translator.trans('flarum-ext-welcomebox.admin.UseWidget'),
       type: 'boolean',
+      help: app.translator.trans('flarum-ext-welcomebox.admin.UseWidgetHelp'),
     })
     .registerSetting({
-      setting: 'justoverclock-welcomebox.hide.guestbox',
+      setting: 'justoverclock-welcomebox.show.guestbox',
       label: app.translator.trans('flarum-ext-welcomebox.admin.enablepostbox'),
       type: 'boolean',
     })
