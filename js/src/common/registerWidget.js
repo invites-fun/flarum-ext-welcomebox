@@ -1,5 +1,4 @@
 import Widgets from 'flarum/extensions/afrux-forum-widgets-core/common/extend/Widgets';
-
 import WelcomeBoxWidget from './components/WelcomeBoxWidget';
 
 export default function (app) {
