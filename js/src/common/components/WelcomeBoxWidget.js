@@ -2,6 +2,7 @@ import Widget from 'flarum/extensions/afrux-forum-widgets-core/common/components
 import app from 'flarum/forum/app';
 import WelcomeBoxContent from './WelcomeBoxContent';
 
+
 export default class WelcomeBoxWidget extends Widget {
   className() {
     return 'welcomebox-widget';
@@ -23,7 +24,7 @@ export default class WelcomeBoxWidget extends Widget {
       return <WelcomeBoxContent user={user} />;
     }
 
-    if (app.forum.attribute('showGuestBox')) {
+    if (app.forum.attribute('justoverclock-welcomebox.showGuestBox')) {
       return <WelcomeBoxContent />;
     }
 

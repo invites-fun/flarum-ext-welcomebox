@@ -18,7 +18,7 @@ app.initializers.add('justoverclock/flarum-ext-welcomebox', () => {
 
     if (user) {
       items.add('welcomeBox', <WelcomeBoxContent user={user} />, 20);
-    } else if (app.forum.attribute('showGuestBox')) {
+    } else if (app.forum.attribute('justoverclock-welcomebox.showGuestBox')) {
       items.add('welcomeBoxGuest', <WelcomeBoxContent />, 20);
     }
   });

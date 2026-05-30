@@ -27,15 +27,17 @@ export default class WelcomeBoxContent extends Component {
     return (
       <div className="containerwb">
         <div className="backgrwb">
-          {Button.component({
-            icon: 'fas fa-sign-out-alt logoutt',
-            title: app.translator.trans('core.forum.header.log_out_button'),
-            className: 'Dropdown-toggle Button logwbox',
-            onclick: app.session.logout.bind(app.session),
-          })}
+          <Button
+            icon="fas fa-sign-out-alt logoutt"
+            title={app.translator.trans('core.forum.header.log_out_button')}
+            className="Dropdown-toggle Button logwbox"
+            onclick={app.session.logout.bind(app.session)}
+          />
           <div>
             <a href={app.route.user(user)}>
-              <div className="avatarwb">{AvatarEditor.component({ user })}</div>
+              <div className="avatarwb">
+                <AvatarEditor user={user} />
+              </div>
             </a>
           </div>
           <div className="contentwb">
@@ -84,7 +86,7 @@ export default class WelcomeBoxContent extends Component {
 
   guestView() {
     const imgAvatar =
-      app.forum.attribute('imgUrl') ||
+      app.forum.attribute('justoverclock-welcomebox.imgUrl') ||
       app.forum.attribute('baseUrl') + '/assets/extensions/justoverclock-welcomebox/no-avatar.png';
     const allowSignUp = app.forum.attribute('allowSignUp');
 

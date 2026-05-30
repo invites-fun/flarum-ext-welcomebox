@@ -23,9 +23,7 @@ return [
         ->css(__DIR__ . '/resources/less/admin.less'),
     new Extend\Locales(__DIR__ . '/resources/locale'),
     (new Extend\Settings())
-        ->serializeToForum('showGuestBox', 'justoverclock-welcomebox.show.guestbox', 'boolval', false),
-    (new Extend\Settings())
-        ->serializeToForum('justoverclock-welcomebox.UseWidget', 'justoverclock-welcomebox.UseWidget', 'boolval', false),
-    (new Extend\Settings())
-        ->serializeToForum('imgUrl', 'justoverclock-welcomebox.imgUrl'),
+        ->serializeToForum('justoverclock-welcomebox.showGuestBox', 'justoverclock-welcomebox.show.guestbox', 'boolval', false)
+        ->serializeToForum('justoverclock-welcomebox.UseWidget', 'justoverclock-welcomebox.UseWidget', 'boolval', false)
+        ->serializeToForum('justoverclock-welcomebox.imgUrl', 'justoverclock-welcomebox.imgUrl', 'strval', ''),
 ];
