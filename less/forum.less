@@ -1,10 +1,10 @@
-@primarybgww: linear-gradient(0deg, rgba(252,252,252,1) 0%, rgba(255,255,255,0) 100%);
+@WelcomeBox-bg: var(--body-bg);
 
-.ulwb {
+.WelcomeBox-stats {
   list-style-type: none;
 }
 
-.containerwb {
+.WelcomeBox-container {
   margin-top: 20px;
   margin-bottom: 20px;
   width: 100%;
@@ -15,24 +15,24 @@
   align-items: center;
 }
 
-.textinfo{
-  color: #667c99;
+.WelcomeBox-greeting {
+  color: var(--muted-color);
 }
 
-.guestavatarimg{
+.WelcomeBox-guestAvatar {
   height: 100px;
   width: 100px;
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
-.iconbadge {
+.WelcomeBox-badges {
     display: flex;
     justify-content: center;
     list-style: none;
 }
 
-.iconbadge{
+.WelcomeBox-badges {
   display: flex;
   top: 45%;
   left: 45%;
@@ -41,11 +41,16 @@
   li {
     margin-right: 3px;
   }
+
+  li.item-group1 {
+    list-style: none;
+  }
 }
 
-.backgrwb {
-  background: @primarybgww;
+.WelcomeBox-card {
+  background: @WelcomeBox-bg;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-bottom: 2px solid fade(#000, 13%);
   border-radius: 20px;
   width: inherit;
   height: auto;
@@ -56,7 +61,7 @@
   align-items: center;
 }
 
-.avatarwb {
+.WelcomeBox-avatar {
   display: flex;
   justify-content: center;
   
@@ -73,7 +78,7 @@
     border: 5px white solid;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.35);
     transform: translatey(0px);
     img {
       width: 100%;
@@ -82,7 +87,7 @@
   }
 }
 
-.contentwb {
+.WelcomeBox-content {
   width: 100%;
   max-width: 600px;
   padding: 5px 15px;
@@ -92,13 +97,13 @@
 
 
 .TagsPage-nav{
-  .containerwb{
+  .WelcomeBox-container {
     display: none;
   }
 }
 
 .TagsPage-nav{
-  .containerwbguest{
+  .WelcomeBox-guestContainer {
     display: none;
   }
 }
@@ -127,21 +132,22 @@
   }
 }
 
-.guesttext {
+.WelcomeBox-guestGreeting {
   font-weight: bold;
   margin-top: 5px;
 }
 
-p.guestdesc {
+p.WelcomeBox-guestDescription {
   padding: 15px;
   margin-top: -10px;
   text-align: center;
   margin-bottom: 3px;
 }
 
-.backgrwbguest {
-  background: @primarybgww;
+.WelcomeBox-guestCard {
+  background: @WelcomeBox-bg;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-bottom: 2px solid fade(#000, 13%);
   border-radius: 20px;
   width: 200px;
   height: 100%;
@@ -151,8 +157,8 @@ p.guestdesc {
   align-items: center;
 }
 
-.menuicon{
-  color: @primary-color;
+.WelcomeBox-actionIcon {
+  color: var(--primary-color);
   padding: 5px;
   transition: filter 0.2s;
   &:hover {
@@ -160,38 +166,34 @@ p.guestdesc {
   }
 }
 
-.circletop {
+.WelcomeBox-actionMenu {
   margin-top: 8px;
 }
 
 body when (@config-dark-mode = true) {
-.textinfo {
-  color:#fff
+  .WelcomeBox-greeting {
+    color: var(--text-on-dark);
   }
-  .backgrwb {
-  background: fade(@primary-color, 10%);
+  .WelcomeBox-card {
+    background: fade(@primary-color, 10%);
   }
-  .backgrwbguest{
-    background: #1b2028;
+  .WelcomeBox-guestCard {
+    background: var(--control-bg);
   }
 }
 .welcomebox-widget{
   .AfruxWidgets-Widget-content {
     background: transparent;
   }
-  .backgrwb {
+  .WelcomeBox-card {
     width: 180px;
   }
-  .backgrwbguest {
+  .WelcomeBox-guestCard {
     width: 180px;
   }
 }
 
-i.icon.fas.fa-sign-out-alt.logout.Button-icon {
-  margin: 0 auto;
-}
-
-.logwbox {
+.WelcomeBox-logoutButton {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -211,9 +213,4 @@ i.icon.fas.fa-sign-out-alt.logout.Button-icon {
   &:hover {
     color: var(--error-color) !important;
   }
-}
-
-
-li.item-group1 {
-  list-style: none;
 }
