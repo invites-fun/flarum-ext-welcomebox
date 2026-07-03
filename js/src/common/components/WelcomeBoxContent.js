@@ -20,7 +20,7 @@ export default class WelcomeBoxContent extends Component {
   }
 
   userView(user) {
-    const moneyName = app.forum.attribute('huoxin-money-with-history.moneyname') || app.forum.attribute('antoinefr-money.moneyname');
+    const moneyName = app.forum.attribute('huoxin-money-with-history.money_name') || app.forum.attribute('antoinefr-money.moneyname');
     const money = moneyName ? user.attribute('money') : null;
     const displayMoneyName = (moneyName || '').replace('[money] ', '');
     const settingsLink = app.route('settings');
